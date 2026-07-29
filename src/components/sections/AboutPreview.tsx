@@ -18,7 +18,7 @@ export function AboutPreview() {
         >
           <img
             src={images.about}
-            alt="KEYVIQ researcher at work"
+            alt="Keyviq Research researcher at work"
             className="rounded-2xl w-full aspect-4/3 object-cover"
           />
           <div className="absolute bottom-5 right-5 rounded-xl bg-keyviq-blue px-6 py-4 text-white shadow-lg">
@@ -41,7 +41,7 @@ export function AboutPreview() {
             The High-Margin Sweet Spot Between Human Expertise & AI Precision
           </h2>
           <p className="mt-4 text-gray-500">
-            KEYVIQ is a premium Hybrid (Human + AI) Market Research Agency registered in the
+            Keyviq Research is a premium Hybrid (Human + AI) Market Research Agency registered in the
             US, operating globally. Instead of replacing humans with AI, we use AI to
             eliminate human errors — while our Human Experts handle project strategy,
             on-site supervision, and final client recommendations. The result: verified

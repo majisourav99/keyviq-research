@@ -11,7 +11,7 @@ export function About() {
     <>
       <PageHeader
         eyebrow="About Us"
-        title="About KEYVIQ"
+        title="About Keyviq Research"
         breadcrumb="About"
         image={images.pageHeaderAbout}
       />
@@ -20,7 +20,7 @@ export function About() {
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-14 items-center">
           <img
             src={images.serviceAiLlm}
-            alt="KEYVIQ research operations"
+            alt="Keyviq Research operations"
             className="rounded-2xl w-full aspect-4/3 object-cover"
           />
           <div>
@@ -31,7 +31,7 @@ export function About() {
               Who We Are
             </h2>
             <p className="mt-4 text-gray-500">
-              KEYVIQ is a premium Hybrid (Human + AI) Market Research Agency registered
+              Keyviq Research is a premium Hybrid (Human + AI) Market Research Agency registered
               in the US, operating globally. We deliver both digital and on-site market
               research for Tech, B2B, B2C, and Healthcare companies.
             </p>
@@ -41,7 +41,7 @@ export function About() {
                 verified human data, supervised by human experts, accelerated by AI tools.
               </strong>{" "}
               Traditional agencies are slow and error-prone. Pure AI startups lack
-              real-world validation. KEYVIQ combines the best of both — with an
+              real-world validation. Keyviq Research combines the best of both — with an
               anti-fraud security stack that competitors simply cannot replicate.
             </p>
             <div className="mt-8">

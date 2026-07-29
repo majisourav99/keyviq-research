@@ -8,9 +8,12 @@ export function Footer() {
     <footer className="bg-keyviq-navy text-white/70">
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-black tracking-tight text-white">KEY</span>
-            <span className="text-2xl font-black tracking-tight text-keyviq-cyan">VIQ</span>
+          <Link to="/" className="flex items-baseline gap-1.5">
+            <span className="flex items-center">
+              <span className="text-2xl font-black tracking-tight text-white">KEY</span>
+              <span className="text-2xl font-black tracking-tight text-keyviq-cyan">VIQ</span>
+            </span>
+            <span className="text-sm font-medium text-white/60">Research</span>
           </Link>
           <p className="mt-4 text-sm max-w-xs">
             A premium Hybrid (Human + AI) Market Research Agency delivering high-integrity data
@@ -79,7 +82,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-white/50 flex flex-col sm:flex-row justify-between gap-2">
-          <span>© {new Date().getFullYear()} KEYVIQ. Premium Market Research — Global Operations. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Keyviq Research. Premium Market Research — Global Operations. All rights reserved.</span>
           <div className="flex gap-4">
             <Link to="/contact" className="hover:text-white">
               Privacy Policy

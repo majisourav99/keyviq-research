@@ -151,7 +151,7 @@ export function ServiceDetail() {
 
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-6">
-          <SectionHeading eyebrow="Why Choose Us" title={`Why Businesses Choose KEYVIQ for ${service.title}`} />
+          <SectionHeading eyebrow="Why Choose Us" title={`Why Businesses Choose Keyviq Research for ${service.title}`} />
           <div className="mt-10">
             <CheckList items={service.whyChooseUs} columns={2} />
           </div>

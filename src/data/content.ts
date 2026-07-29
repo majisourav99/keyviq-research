@@ -166,8 +166,8 @@ export const footerColumns = {
 
 export const contactInfo = {
   email: "contact@keyviq.com",
-  phone: "+62 857-9447-5880",
-  office: "Menara Hijau, Lantai 7, Jl. Letjen M.T. Haryono No.Kav. 33, Jakarta Selatan 12770, Indonesia",
+  phone: "+1 (415) 555-0142",
+  office: "455 Market Street, Suite 1600, San Francisco, CA 94105, United States",
 };
 
 export const consultation = {
