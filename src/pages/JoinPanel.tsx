@@ -1,10 +1,11 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, CircleAlert } from "lucide-react";
 import { IconBadge } from "../components/ui/IconBadge";
 import { Button } from "../components/ui/Button";
 import { PageHeader } from "../components/layout/PageHeader";
 import { images } from "../data/images";
+import { submitNetlifyForm } from "../lib/netlifyForm";
 
 const perks = [
   { icon: "Sparkles", title: "Get Paid for Your Opinion", body: "Earn rewards for surveys, interviews, and studies you take part in." },
@@ -15,10 +16,21 @@ const perks = [
 
 export function JoinPanel() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(false);
+    try {
+      await submitNetlifyForm("join-panel", e.currentTarget);
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -72,7 +84,20 @@ export function JoinPanel() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form
+                name="join-panel"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-5"
+              >
+                <input type="hidden" name="form-name" value="join-panel" />
+                <p className="hidden">
+                  <label>
+                    Don't fill this out: <input name="bot-field" />
+                  </label>
+                </p>
                 <div>
                   <label htmlFor="panel-name" className="text-sm font-medium text-gray-700">
                     Full name
@@ -109,8 +134,14 @@ export function JoinPanel() {
                     className="mt-1.5 w-full rounded-md border border-gray-200 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-blue"
                   />
                 </div>
-                <Button type="submit" icon={false} className="w-full justify-center">
-                  Join the Panel
+                {error && (
+                  <div className="flex items-start gap-2 text-sm text-red-600">
+                    <CircleAlert className="size-4 mt-0.5 shrink-0" />
+                    Something went wrong submitting your details. Please try again.
+                  </div>
+                )}
+                <Button type="submit" icon={false} disabled={submitting} className="w-full justify-center">
+                  {submitting ? "Submitting..." : "Join the Panel"}
                 </Button>
               </form>
             )}

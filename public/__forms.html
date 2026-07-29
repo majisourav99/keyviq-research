@@ -1,0 +1,36 @@
+<!doctype html>
+<!--
+  Not a real page. Netlify Forms detects forms by scanning the static HTML
+  in the publish directory at build time, but this app's forms are rendered
+  client-side by React, so they're invisible to that scan. This file gives
+  Netlify a static copy of each form (same name + field names) to register,
+  while the real React forms POST to Netlify's form-handling endpoint at
+  runtime. See src/lib/netlifyForm.ts for the submit logic.
+-->
+<html>
+  <body>
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
+    <form name="quote-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="phone" />
+      <input type="text" name="service" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
+    <form name="join-panel" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="country" />
+      <input type="text" name="bot-field" />
+    </form>
+  </body>
+</html>
