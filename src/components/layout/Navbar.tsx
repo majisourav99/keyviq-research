@@ -10,12 +10,15 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-baseline gap-1.5" onClick={() => setOpen(false)}>
-          <span className="flex items-center">
-            <span className="text-2xl font-black tracking-tight text-keyviq-blue">KEY</span>
-            <span className="text-2xl font-black tracking-tight text-gray-900">VIQ</span>
+        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+          <img src="/icon.png" alt="" className="h-8 w-auto" />
+          <span className="flex items-baseline gap-1.5">
+            <span className="flex items-center">
+              <span className="text-2xl font-black tracking-tight text-keyviq-blue">KEY</span>
+              <span className="text-2xl font-black tracking-tight text-gray-900">VIQ</span>
+            </span>
+            <span className="text-2xl font-semibold text-gray-900 hidden sm:inline">Research</span>
           </span>
-          <span className="text-sm font-medium text-gray-500 hidden sm:inline">Research</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
