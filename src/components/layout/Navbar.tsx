@@ -17,7 +17,7 @@ export function Navbar() {
               <span className="text-2xl font-black tracking-tight text-keyviq-blue">KEY</span>
               <span className="text-2xl font-black tracking-tight text-gray-900">VIQ</span>
             </span>
-            <span className="text-2xl font-semibold text-gray-900 hidden sm:inline">Research</span>
+            <span className="text-2xl font-semibold text-gray-900">Research</span>
           </span>
         </Link>
 
