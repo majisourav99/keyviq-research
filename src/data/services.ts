@@ -2,19 +2,19 @@ export type ServiceDetailBlock = {
   title: string;
   body: string;
   bullets: string[];
-  graphicLabel: string;
 };
 
 export type Service = {
   slug: string;
   icon: string;
+  image: string;
+  tag: string;
   title: string;
   shortDescription: string;
   cardBullets: string[];
   heroTagline: string;
   whyItMattersTitle: string;
   whyItMattersBody: string[];
-  whyItMattersGraphicLabel: string;
   whatYoullGet: { icon: string; title: string; body: string }[];
   detailBlocks: ServiceDetailBlock[];
   howItWorks: { title: string; body: string }[];
@@ -23,489 +23,411 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "market-research",
+    slug: "healthcare-pharma-insights",
     icon: "BarChart3",
-    title: "Market Research",
+    image: "serviceHealthcare",
+    tag: "TOP PRIORITY",
+    title: "Healthcare & Pharma Insights",
     shortDescription:
-      "AI-modeled analysis of consumer behavior, competitors, and emerging trends to drive confident decisions.",
+      "The highest-margin niche we serve. Strict data compliance, double-verified feedback from real HCPs and patients. Enterprise budgets, long-term relationships, low AI-disruption risk.",
     cardBullets: [
-      "Consumer Behavior Analysis",
-      "Competitive Intelligence",
-      "Trend Forecasting",
+      "HCP Panel Recruitment",
+      "Patient Experience Studies",
+      "Regulatory-Compliant Data",
+      "Pharma Competitive Intel",
     ],
     heroTagline:
-      "Gain deeper insight into your market with AI-modeled analysis layered on rigorous research design. We help you uncover opportunities, quantify risk, and stay ahead of the competition with data your models can trust.",
-    whyItMattersTitle: "Why AI-Powered Market Research Matters",
+      "Regulatory-grade healthcare and pharma research, built on verified HCP and patient panels with a full anti-fraud audit trail.",
+    whyItMattersTitle: "Why Healthcare & Pharma Research Matters",
     whyItMattersBody: [
-      "Markets move faster than quarterly reports can track. Without a live signal on consumer behavior and competitor moves, businesses risk decisions built on stale assumptions.",
-      "Our research pairs traditional methodology with AI pattern detection, so shifts in demand and sentiment surface while there's still time to act on them.",
+      "Compliance failures and fabricated respondents are the two things that can sink a pharma study. Traditional panels can't prove a respondent is really a licensed HCP; pure AI tools can't be trusted with regulated data at all.",
+      "KEYVIQ verifies every HCP and patient respondent through hardware fingerprinting and GPS-lock, then routes findings through a human expert review before they reach your regulatory or medical affairs team.",
     ],
-    whyItMattersGraphicLabel: "Signal Detection",
     whatYoullGet: [
-      {
-        icon: "Users",
-        title: "In-depth Consumer Behavior Analysis",
-        body: "Identify customer needs, motivations, and pain points using AI-clustered behavioral data.",
-      },
-      {
-        icon: "Target",
-        title: "Competitive Intelligence",
-        body: "Benchmark your business against key competitors with continuously updated positioning models.",
-      },
-      {
-        icon: "TrendingUp",
-        title: "Trend Forecasting & Market Insights",
-        body: "Detect emerging shifts in demand before they show up in your revenue numbers.",
-      },
+      { icon: "ShieldCheck", title: "HCP Panel Recruitment", body: "Verified physicians and specialists, screened and license-checked before they enter your study." },
+      { icon: "ClipboardCheck", title: "Patient Experience Studies", body: "Structured, compliant patient journey research across therapeutic areas." },
+      { icon: "BarChart3", title: "Pharma Competitive Intel", body: "Positioning and messaging benchmarks against named competitor products." },
     ],
     detailBlocks: [
       {
-        title: "Consumer Behavior Analysis",
-        body: "Understand the people behind the purchase.",
+        title: "HCP Panel Recruitment",
+        body: "Real physicians, verified before they respond.",
         bullets: [
-          "Analyze purchasing patterns and decision-making processes",
-          "Segment audiences with AI clustering for sharper targeting",
-          "Surface unmet needs from open-ended survey and review text",
+          "License and specialty verification for every HCP respondent",
+          "Access to niche specialties across 50+ countries",
+          "Full audit trail for regulatory submission",
         ],
-        graphicLabel: "Behavior Clusters",
       },
       {
-        title: "Competitive Intelligence",
-        body: "Know exactly where you stand.",
+        title: "Patient Experience Studies",
+        body: "Understand the patient journey without guesswork.",
         bullets: [
-          "Identify competitors' strengths, weaknesses, and strategies",
-          "Track pricing and positioning shifts on a rolling basis",
-          "Discover market gaps and differentiation opportunities",
+          "Condition-specific screening and recruitment",
+          "Compliant handling of sensitive health data",
+          "Longitudinal tracking across treatment stages",
         ],
-        graphicLabel: "Competitive Map",
       },
       {
-        title: "Trend Forecasting",
-        body: "See around the next corner.",
+        title: "Regulatory-Compliant Data",
+        body: "Data your legal and medical affairs teams can stand behind.",
         bullets: [
-          "Detect emerging market trends and shifts in consumer demand",
-          "Leverage predictive models to anticipate industry changes",
-          "Build strategies that align with long-term growth opportunities",
+          "GPS and device-fingerprint verification on every submission",
+          "Documented chain of custody from response to report",
+          "Human expert sign-off before final delivery",
         ],
-        graphicLabel: "Forecast Model",
       },
     ],
     howItWorks: [
-      { title: "Tell Us About Your Business", body: "Share your industry, target market, and key challenges." },
-      { title: "Define Your Objectives", body: "Specify the insights you need — customer, competitor, or market entry." },
-      { title: "Receive a Customized Research Plan", body: "Our team designs a tailored approach powered by our AI analytics stack." },
-      { title: "Get Actionable Insights", body: "Receive clear, data-backed recommendations you can apply immediately." },
+      { title: "Share Your Study Objectives", body: "Tell us the therapeutic area, respondent profile, and compliance constraints." },
+      { title: "Panel Feasibility Check", body: "We confirm verified HCP/patient availability within 48 hours." },
+      { title: "Fielding with Live Fraud Scrubbing", body: "AI screens every response in real time; our team reviews flags manually." },
+      { title: "Expert Analysis Deck", body: "A senior researcher delivers findings with regulatory-ready documentation." },
     ],
     whyChooseUs: [
-      "Data-driven methodologies grounded in proven research design",
-      "AI-tailored insights, not generic templated reports",
-      "Actionable recommendations you can apply immediately",
-      "Fast turnaround without sacrificing analytical depth",
+      "Verified HCP and patient panels, not self-declared respondents",
+      "Full audit trail suitable for regulatory review",
+      "Senior human review on every deliverable",
+      "Enterprise-grade confidentiality and data handling",
     ],
   },
   {
-    slug: "market-entry-strategies",
-    icon: "Globe",
-    title: "Market Entry Strategies",
+    slug: "ai-llm-training-data-panels",
+    icon: "Cpu",
+    image: "serviceAiLlm",
+    tag: "HIGH GROWTH",
+    title: "AI & LLM Training Data Panels",
     shortDescription:
-      "Expand into new markets with AI-backed feasibility studies, competitive analysis, and risk assessment.",
+      "Human-annotated, fraud-scrubbed training and evaluation data for LLM and AI teams who can't afford to train on garbage.",
     cardBullets: [
-      "Market Feasibility Studies",
-      "Competitive Analysis",
-      "Risk Assessment",
+      "Human-in-the-Loop Annotation",
+      "Model Evaluation Panels",
+      "RLHF Preference Data",
+      "Domain Expert Review",
     ],
     heroTagline:
-      "Expand your business into new markets with confidence. Expert guidance on entering new markets, backed by AI-modeled feasibility and risk data that maximize opportunity and minimize downside.",
-    whyItMattersTitle: "Why Market Entry Strategy Matters",
+      "Model quality is a data quality problem. KEYVIQ supplies human-verified annotation, evaluation, and preference data your model can actually trust.",
+    whyItMattersTitle: "Why Verified Training Data Matters",
     whyItMattersBody: [
-      "Entering a new market is one of the most consequential decisions a business can make. Without proper planning, companies risk wasting resources or facing challenges they never modeled for.",
-      "Our market entry service pairs on-the-ground research with AI-driven scenario modeling, helping you evaluate risk and build a foundation for sustainable growth.",
+      "Crowdsourced annotation platforms are flooded with bot traffic and low-effort responses — and it shows up in model quality months later, when it's expensive to fix.",
+      "KEYVIQ applies the same anti-fraud stack we use in market research to AI data pipelines: every annotator is device-fingerprinted and GPS-verified, with domain experts reviewing edge cases.",
     ],
-    whyItMattersGraphicLabel: "Strategic Market Expansion",
     whatYoullGet: [
-      {
-        icon: "Globe",
-        title: "Market Feasibility Studies",
-        body: "Evaluate true market potential with AI-modeled sizing, demand, and growth projections.",
-      },
-      {
-        icon: "BarChart3",
-        title: "Competitive Analysis",
-        body: "Detailed analysis of positioning, pricing strategy, strengths, and market gaps.",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Risk Assessment",
-        body: "Identify and mitigate financial, operational, and regulatory risk before you enter.",
-      },
+      { icon: "Cpu", title: "Human-in-the-Loop Annotation", body: "Verified annotators labeling text, image, and audio data to your spec." },
+      { icon: "Sparkles", title: "RLHF Preference Data", body: "Structured pairwise comparisons for reinforcement learning from human feedback." },
+      { icon: "ClipboardCheck", title: "Model Evaluation Panels", body: "Independent human evaluation of model outputs against your quality rubric." },
     ],
     detailBlocks: [
       {
-        title: "Market Feasibility Studies",
-        body: "Evaluate the true potential of your target market.",
+        title: "Human-in-the-Loop Annotation",
+        body: "Labeling you can trace back to a real, verified person.",
         bullets: [
-          "Assess market size, demand, and growth potential with predictive models",
-          "Analyze customer needs and local market conditions",
-          "Determine the viability of your product or service",
+          "Device-fingerprinted and GPS-verified annotator pool",
+          "Custom annotation guidelines and QA rubrics",
+          "Inter-annotator agreement reporting",
         ],
-        graphicLabel: "Market Potential Analysis",
       },
       {
-        title: "Competitive Analysis",
-        body: "Understand who you're up against.",
+        title: "RLHF Preference Data",
+        body: "Preference signal without the noise.",
         bullets: [
-          "Identify key competitors and their market positioning",
-          "Analyze pricing strategies, strengths, and weaknesses",
-          "Discover gaps and opportunities for differentiation",
+          "Pairwise and ranked-choice comparison studies",
+          "Domain-expert review layered on top of general annotators",
+          "Delivery in your preferred training data format",
         ],
-        graphicLabel: "Competitive Intelligence",
       },
       {
-        title: "Risk Assessment",
-        body: "Minimize uncertainty before entering.",
+        title: "Model Evaluation Panels",
+        body: "Know how your model performs with real humans, not just benchmarks.",
         bullets: [
-          "Identify potential financial, operational, and regulatory risks",
-          "Evaluate market entry barriers and challenges",
-          "Develop AI-informed mitigation strategies to reduce exposure",
+          "Blind evaluation against your quality rubric",
+          "Segment results by geography, language, and use case",
+          "Fraud-scrubbed to remove low-effort raters",
         ],
-        graphicLabel: "Risk Mitigation Strategy",
       },
     ],
     howItWorks: [
-      { title: "Share Your Expansion Goals", body: "Tell us which market you want to enter and your business objectives." },
-      { title: "Define Scope & Priorities", body: "Clarify your focus areas — feasibility, competition, or risk evaluation." },
-      { title: "Customized Strategy Development", body: "We design a tailored market entry plan based on data and AI-driven insight." },
-      { title: "Actionable Roadmap Delivery", body: "Receive a clear, step-by-step strategy to guide your market entry." },
+      { title: "Define Your Data Need", body: "Tell us the task — annotation, RLHF, or evaluation — and your quality bar." },
+      { title: "Pilot Batch", body: "We run a small verified batch so you can validate quality before scaling." },
+      { title: "Scaled Fielding", body: "Full-volume data collection with live fraud scrubbing and QA sampling." },
+      { title: "Delivery & Reporting", body: "Structured data delivery plus a quality report from our research team." },
     ],
     whyChooseUs: [
-      "Data-driven insights tailored to your business context",
-      "Strategic approach focused on minimizing risk",
-      "Practical, execution-ready recommendations",
-      "Expertise across diverse industries and markets",
+      "The same anti-fraud stack used in our market research panels",
+      "Domain experts available for specialized or technical content",
+      "Pilot-first approach so you validate quality before scaling spend",
+      "Delivery formats built for ML pipelines, not just spreadsheets",
     ],
   },
   {
-    slug: "product-testing-development",
-    icon: "FlaskConical",
-    title: "Product Testing & Development",
-    shortDescription:
-      "Validate concepts and features with AI-enhanced testing before you commit to full-scale launch.",
-    cardBullets: [
-      "Concept Testing",
-      "Product Validation",
-      "Feature Prioritization",
-    ],
-    heroTagline:
-      "De-risk your roadmap. Test concepts, features, and prototypes with real consumer panels and AI-modeled response analysis before you commit engineering time and launch budget.",
-    whyItMattersTitle: "Why Product Testing Matters",
-    whyItMattersBody: [
-      "Shipping a feature nobody wants is one of the most expensive mistakes a product team can make — in engineering time, and in market trust.",
-      "Our testing pipeline combines structured consumer feedback with AI sentiment and preference modeling, so you know what to build before you build it.",
-    ],
-    whyItMattersGraphicLabel: "Validation Signal",
-    whatYoullGet: [
-      {
-        icon: "Lightbulb",
-        title: "Concept Testing",
-        body: "Validate early-stage ideas against target segments before development begins.",
-      },
-      {
-        icon: "FlaskConical",
-        title: "Product Validation",
-        body: "Stress-test usability, pricing, and messaging with real users and AI-scored feedback.",
-      },
-      {
-        icon: "ClipboardCheck",
-        title: "Feature Prioritization",
-        body: "Rank your roadmap by AI-modeled impact on adoption and satisfaction.",
-      },
-    ],
-    detailBlocks: [
-      {
-        title: "Concept Testing",
-        body: "Validate before you build.",
-        bullets: [
-          "Test messaging, positioning, and value proposition early",
-          "Segment reactions by AI-clustered customer profiles",
-          "Kill weak concepts before they consume a roadmap quarter",
-        ],
-        graphicLabel: "Concept Signal",
-      },
-      {
-        title: "Product Validation",
-        body: "Confirm product-market fit with evidence.",
-        bullets: [
-          "Run structured usability and pricing studies",
-          "Score open-ended feedback with AI sentiment analysis",
-          "Benchmark against category norms and competitor products",
-        ],
-        graphicLabel: "Fit Score",
-      },
-      {
-        title: "Feature Prioritization",
-        body: "Build what actually moves adoption.",
-        bullets: [
-          "Rank features by predicted impact on retention and satisfaction",
-          "Simulate roadmap trade-offs before committing resources",
-          "Deliver a prioritized backlog your team can act on immediately",
-        ],
-        graphicLabel: "Priority Model",
-      },
-    ],
-    howItWorks: [
-      { title: "Share Your Concept or Product", body: "Tell us what you're testing and who you're testing it with." },
-      { title: "Define Success Metrics", body: "Clarify what a 'go' decision looks like for your team." },
-      { title: "Run the Testing Program", body: "We recruit panels, run studies, and apply AI-scored analysis to results." },
-      { title: "Get a Go/No-Go Recommendation", body: "Receive a clear recommendation backed by the underlying data." },
-    ],
-    whyChooseUs: [
-      "Fast-cycle testing that fits real product timelines",
-      "AI-scored feedback removes guesswork from qualitative data",
-      "Recommendations framed as go/no-go, not just observations",
-      "Experience across software, physical, and hybrid products",
-    ],
-  },
-  {
-    slug: "customer-insights",
+    slug: "b2b-saas-tech-ux-research",
     icon: "Users",
-    title: "Customer Insights",
+    image: "serviceB2bUx",
+    tag: "ENTERPRISE",
+    title: "B2B SaaS & Tech UX Research",
     shortDescription:
-      "Deep, AI-augmented understanding of who your customers are and what actually drives their decisions.",
+      "Usability testing, product-market fit studies, and buyer research for SaaS and tech companies shipping to enterprise customers.",
     cardBullets: [
-      "Segmentation Analysis",
-      "Focus Groups",
-      "Ethnographic Research",
+      "Usability Testing",
+      "Product-Market Fit Studies",
+      "Buyer Committee Research",
+      "Onboarding & Retention Analysis",
     ],
     heroTagline:
-      "Move past demographics into what actually drives your customers. AI-augmented segmentation and qualitative research reveal the needs behind the behavior.",
-    whyItMattersTitle: "Why Customer Insights Matter",
+      "Ship features enterprise buyers actually want. We test with your real ICP, not a generic consumer panel.",
+    whyItMattersTitle: "Why B2B UX Research Matters",
     whyItMattersBody: [
-      "Generic personas lead to generic marketing. Businesses that outgrow their competitors understand their customers at a level competitors haven't reached yet.",
-      "We combine qualitative depth with AI-driven segmentation so you see both the pattern and the person behind it.",
+      "B2B buying committees are harder to reach and easier to mis-read than consumer audiences — a feature that tests well with five friendly users can still fail in procurement.",
+      "We recruit verified professionals matching your actual ICP — by role, seniority, and industry — and combine usability testing with buying-committee-level research.",
     ],
-    whyItMattersGraphicLabel: "Customer Graph",
     whatYoullGet: [
-      {
-        icon: "Users",
-        title: "Segmentation Analysis",
-        body: "AI-clustered segments based on behavior, not just demographics.",
-      },
-      {
-        icon: "Eye",
-        title: "Focus Groups",
-        body: "Moderated qualitative sessions with AI-assisted theme extraction.",
-      },
-      {
-        icon: "Sparkles",
-        title: "Ethnographic Studies",
-        body: "In-context observation revealing needs customers can't always articulate.",
-      },
+      { icon: "Users", title: "Usability Testing", body: "Moderated and unmoderated sessions with users matching your exact ICP." },
+      { icon: "BarChart3", title: "Product-Market Fit Studies", body: "Structured PMF surveys and win/loss analysis across your pipeline." },
+      { icon: "ClipboardCheck", title: "Onboarding & Retention Analysis", body: "Identify where new users stall and where champions are made." },
     ],
     detailBlocks: [
       {
-        title: "Segmentation Analysis",
-        body: "Group customers by what actually predicts behavior.",
+        title: "Usability Testing",
+        body: "Test with the people who'll actually buy it.",
         bullets: [
-          "Build segments from behavioral and attitudinal data, not guesswork",
-          "Score each segment's value and growth potential",
-          "Translate segments into targeting and messaging playbooks",
+          "Recruitment filtered by role, seniority, and industry",
+          "Moderated and unmoderated formats available",
+          "Findings mapped directly to roadmap priorities",
         ],
-        graphicLabel: "Segment Clusters",
       },
       {
-        title: "Focus Groups",
-        body: "Hear directly from your customers, at scale.",
+        title: "Product-Market Fit Studies",
+        body: "Know if you're building the right thing before you scale GTM.",
         bullets: [
-          "Run moderated sessions across markets and segments",
-          "Apply AI-assisted transcription and theme extraction",
-          "Surface quotes and patterns your team can use immediately",
+          "Sean Ellis-style PMF surveys and segmentation",
+          "Win/loss interviews with closed-won and closed-lost accounts",
+          "Competitive displacement analysis",
         ],
-        graphicLabel: "Theme Extraction",
       },
       {
-        title: "Ethnographic Studies",
-        body: "See the context behind the decision.",
+        title: "Buyer Committee Research",
+        body: "Understand every stakeholder in the deal, not just your champion.",
         bullets: [
-          "Observe customers in their real environment, not a survey form",
-          "Identify unspoken frictions in the purchase journey",
-          "Pair observational data with AI pattern detection across sessions",
+          "Mapped research across economic, technical, and end-user buyers",
+          "Objection and procurement-friction analysis",
+          "Messaging recommendations by stakeholder type",
         ],
-        graphicLabel: "Context Mapping",
       },
     ],
     howItWorks: [
-      { title: "Tell Us Who You Want to Understand", body: "Share your customer base, segment, or target audience." },
-      { title: "Define Your Research Questions", body: "Clarify what decisions these insights need to inform." },
-      { title: "Run the Research Program", body: "We field studies and apply AI-assisted analysis to the results." },
-      { title: "Receive Actionable Personas & Insights", body: "Get segment profiles and recommendations your team can use today." },
+      { title: "Define Your ICP", body: "Share target roles, seniority, industries, and company size." },
+      { title: "Verified Recruitment", body: "We source and screen respondents matching your exact criteria." },
+      { title: "Research Fielding", body: "Usability sessions, surveys, or interviews run on your timeline." },
+      { title: "Roadmap-Ready Findings", body: "A prioritized findings deck mapped to product and GTM decisions." },
     ],
     whyChooseUs: [
-      "Segments built on behavior, not assumed demographics",
-      "Qualitative depth paired with AI-scale analysis",
-      "Insights delivered as playbooks, not just findings",
-      "Experience across consumer and B2B customer bases",
+      "Recruitment matched to real B2B buying committees, not generic panels",
+      "Findings delivered as roadmap-ready priorities, not raw transcripts",
+      "Experience across PLG and enterprise sales-led SaaS",
+      "Fast turnaround built around sprint and release cycles",
     ],
   },
   {
-    slug: "customer-satisfaction-surveys",
-    icon: "ClipboardCheck",
-    title: "Customer Satisfaction Surveys",
-    shortDescription:
-      "AI-scored satisfaction and loyalty measurement that tells you exactly where experience is breaking down.",
-    cardBullets: [
-      "NPS & CSAT Measurement",
-      "Customer Journey Mapping",
-      "Loyalty Analysis",
-    ],
-    heroTagline:
-      "Know exactly where your customer experience is winning — and where it's losing you renewals. AI-scored satisfaction data pinpoints the moments that matter most.",
-    whyItMattersTitle: "Why Satisfaction Measurement Matters",
-    whyItMattersBody: [
-      "A single average NPS score hides more than it reveals. The real value is in knowing which touchpoint is quietly driving churn.",
-      "Our surveys pair standard satisfaction metrics with AI-driven driver analysis, so every score comes with a reason attached.",
-    ],
-    whyItMattersGraphicLabel: "Satisfaction Signal",
-    whatYoullGet: [
-      {
-        icon: "ClipboardCheck",
-        title: "NPS & CSAT Measurement",
-        body: "Continuous measurement benchmarked against your category.",
-      },
-      {
-        icon: "TrendingUp",
-        title: "Customer Journey Mapping",
-        body: "AI-modeled mapping of exactly where satisfaction rises and falls.",
-      },
-      {
-        icon: "Sparkles",
-        title: "Loyalty Analysis",
-        body: "Predictive modeling of churn risk and renewal likelihood.",
-      },
-    ],
-    detailBlocks: [
-      {
-        title: "NPS & CSAT Measurement",
-        body: "Track satisfaction with statistical rigor.",
-        bullets: [
-          "Deploy always-on or milestone-triggered surveys",
-          "Benchmark scores against category and competitor norms",
-          "Break scores down by segment, not just a single average",
-        ],
-        graphicLabel: "Score Tracking",
-      },
-      {
-        title: "Customer Journey Mapping",
-        body: "Find the moment satisfaction breaks.",
-        bullets: [
-          "Map satisfaction at every touchpoint across the journey",
-          "Use AI driver analysis to isolate root causes, not symptoms",
-          "Prioritize fixes by their impact on overall experience score",
-        ],
-        graphicLabel: "Journey Map",
-      },
-      {
-        title: "Loyalty Analysis",
-        body: "See churn risk before it shows up in revenue.",
-        bullets: [
-          "Model renewal and churn likelihood from satisfaction signals",
-          "Flag at-risk accounts for proactive outreach",
-          "Track loyalty trends across cohorts over time",
-        ],
-        graphicLabel: "Churn Risk Model",
-      },
-    ],
-    howItWorks: [
-      { title: "Share Your Customer Base", body: "Tell us about your customers and existing measurement program, if any." },
-      { title: "Define Your Touchpoints", body: "Identify the moments in the journey that matter most to measure." },
-      { title: "Deploy & Collect", body: "We field surveys and apply AI-driven analysis as responses come in." },
-      { title: "Get Driver-Based Recommendations", body: "Receive a prioritized list of what's driving satisfaction up or down." },
-    ],
-    whyChooseUs: [
-      "Driver analysis explains scores, not just reports them",
-      "Segment-level breakdowns instead of a single blended number",
-      "Churn-risk flagging your team can act on before renewal",
-      "Benchmarks calibrated to your specific category",
-    ],
-  },
-  {
-    slug: "brand-perception-surveys",
+    slug: "brand-perception-equity",
     icon: "Eye",
-    title: "Brand Perception Surveys",
+    image: "serviceBrand",
+    tag: "RESEARCH",
+    title: "Brand Perception & Equity",
     shortDescription:
-      "Understand how your brand is really perceived, with AI-modeled sentiment and positioning analysis.",
+      "Know how your brand is actually perceived — not how you hope it is — with verified sentiment and positioning research.",
     cardBullets: [
-      "Brand Awareness Studies",
-      "Positioning Research",
+      "Brand Awareness Tracking",
+      "Positioning & Perceptual Mapping",
       "Reputation Monitoring",
+      "Competitive Brand Benchmarking",
     ],
     heroTagline:
-      "Your brand is defined by perception, not intention. AI-modeled sentiment and positioning research show you exactly how the market sees you today.",
-    whyItMattersTitle: "Why Brand Perception Matters",
+      "Your brand is defined by perception, not intention. We measure how the market actually sees you, with fraud-scrubbed data behind every number.",
+    whyItMattersTitle: "Why Brand Perception Research Matters",
     whyItMattersBody: [
-      "Companies often invest heavily in a brand identity they believe is landing — without evidence of how it's actually received in the market.",
-      "We combine structured brand studies with AI-driven sentiment analysis, giving you a clear, current picture of brand health.",
+      "Companies routinely invest in a brand identity they believe is landing — without evidence of how it's actually received in market.",
+      "KEYVIQ combines structured brand studies with verified respondent panels, so every perception score is backed by a real, checkable human.",
     ],
-    whyItMattersGraphicLabel: "Perception Signal",
     whatYoullGet: [
-      {
-        icon: "Eye",
-        title: "Brand Awareness Studies",
-        body: "Measure aided and unaided awareness against key competitors.",
-      },
-      {
-        icon: "Target",
-        title: "Positioning Research",
-        body: "AI-mapped perceptual positioning across the attributes that matter to buyers.",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Reputation Monitoring",
-        body: "Ongoing sentiment tracking across review and social channels.",
-      },
+      { icon: "Eye", title: "Brand Awareness Tracking", body: "Aided and unaided awareness measured against named competitors." },
+      { icon: "BarChart3", title: "Positioning & Perceptual Mapping", body: "Map where your brand sits on the attributes buyers actually care about." },
+      { icon: "ShieldCheck", title: "Reputation Monitoring", body: "Ongoing sentiment tracking across review and social channels." },
     ],
     detailBlocks: [
       {
-        title: "Brand Awareness Studies",
+        title: "Brand Awareness Tracking",
         body: "Know where you stand in the customer's mind.",
         bullets: [
-          "Measure aided and unaided brand awareness by segment",
-          "Benchmark recall against category competitors",
-          "Track awareness trends over time and by campaign",
+          "Aided and unaided awareness by segment",
+          "Recall benchmarked against category competitors",
+          "Tracked over time and by campaign flight",
         ],
-        graphicLabel: "Awareness Index",
       },
       {
-        title: "Positioning Research",
+        title: "Positioning & Perceptual Mapping",
         body: "See your brand the way the market does.",
         bullets: [
-          "Map perceptual positioning across key brand attributes",
-          "Identify gaps between intended and perceived positioning",
-          "Use AI clustering to find your true competitive set",
+          "Perceptual maps across the attributes that drive purchase",
+          "Gap analysis between intended and perceived positioning",
+          "Clustering to reveal your true competitive set",
         ],
-        graphicLabel: "Positioning Map",
       },
       {
         title: "Reputation Monitoring",
-        body: "Catch shifts in sentiment before they escalate.",
+        body: "Catch sentiment shifts before they escalate.",
         bullets: [
-          "Track sentiment across reviews, social, and survey channels",
-          "Flag emerging reputation risks with AI anomaly detection",
-          "Deliver a rolling brand health score to leadership",
+          "Ongoing tracking across review, social, and survey channels",
+          "Anomaly flags for emerging reputation risk",
+          "Rolling brand health score for leadership reporting",
         ],
-        graphicLabel: "Sentiment Trend",
       },
     ],
     howItWorks: [
       { title: "Share Your Brand Objectives", body: "Tell us what you want to know and who you compete against." },
-      { title: "Define Attributes to Measure", body: "Clarify the brand attributes and channels that matter most." },
-      { title: "Run the Perception Study", body: "We field research and apply AI sentiment and positioning analysis." },
-      { title: "Get a Brand Health Report", body: "Receive a clear picture of perception with prioritized next steps." },
+      { title: "Define Attributes to Measure", body: "Agree on the brand attributes and channels that matter most." },
+      { title: "Run the Perception Study", body: "Fielded with verified respondents and live fraud scrubbing." },
+      { title: "Brand Health Report", body: "A clear picture of perception with prioritized next steps." },
     ],
     whyChooseUs: [
       "Perception measured with evidence, not internal assumption",
-      "AI sentiment analysis across every channel that matters",
+      "Verified respondent panels behind every data point",
       "Positioning maps that reveal your true competitive set",
-      "Ongoing monitoring, not a one-time snapshot",
+      "Ongoing monitoring available, not just a one-time snapshot",
+    ],
+  },
+  {
+    slug: "sustainability-esg-research",
+    icon: "Leaf",
+    image: "serviceSustainability",
+    tag: "EARLY MOVER",
+    title: "Sustainability & ESG Research",
+    shortDescription:
+      "Investor- and regulator-grade ESG research, backed by verified data collection your reporting team can defend.",
+    cardBullets: [
+      "ESG Materiality Assessments",
+      "Consumer Sustainability Sentiment",
+      "Supply Chain Impact Studies",
+      "ESG Disclosure Benchmarking",
+    ],
+    heroTagline:
+      "ESG claims get scrutinized harder every year. Ground yours in verified, defensible primary research.",
+    whyItMattersTitle: "Why ESG Research Matters Now",
+    whyItMattersBody: [
+      "Regulators and investors are done accepting ESG claims at face value — and greenwashing accusations can undo years of brand equity in a single news cycle.",
+      "KEYVIQ pairs materiality-assessment methodology with our verified respondent stack, so every sustainability claim you make is backed by defensible primary data.",
+    ],
+    whatYoullGet: [
+      { icon: "Leaf", title: "ESG Materiality Assessments", body: "Stakeholder-weighted materiality studies aligned to reporting frameworks." },
+      { icon: "BarChart3", title: "Consumer Sustainability Sentiment", body: "Understand what your customers actually expect and will pay for." },
+      { icon: "ShieldCheck", title: "ESG Disclosure Benchmarking", body: "See how your disclosures compare against category peers." },
+    ],
+    detailBlocks: [
+      {
+        title: "ESG Materiality Assessments",
+        body: "Focus reporting on what stakeholders actually care about.",
+        bullets: [
+          "Stakeholder surveys across investors, customers, and employees",
+          "Materiality matrix aligned to GRI/SASB-style frameworks",
+          "Prioritized recommendations for your reporting team",
+        ],
+      },
+      {
+        title: "Consumer Sustainability Sentiment",
+        body: "Separate genuine demand from stated preference.",
+        bullets: [
+          "Willingness-to-pay studies for sustainable alternatives",
+          "Segment sustainability attitudes by demographic and geography",
+          "Track sentiment shifts year over year",
+        ],
+      },
+      {
+        title: "Supply Chain Impact Studies",
+        body: "Understand impact beyond your own four walls.",
+        bullets: [
+          "Supplier and partner survey fielding",
+          "Regional impact assessments across your footprint",
+          "Data structured for third-party audit review",
+        ],
+      },
+    ],
+    howItWorks: [
+      { title: "Define Your Reporting Need", body: "Tell us your framework, timeline, and stakeholder groups." },
+      { title: "Stakeholder Mapping", body: "We identify and recruit the right respondent groups." },
+      { title: "Verified Data Collection", body: "Fielding with the same anti-fraud stack used across KEYVIQ studies." },
+      { title: "Audit-Ready Report", body: "Findings delivered in a format your reporting and legal teams can use directly." },
+    ],
+    whyChooseUs: [
+      "Methodology aligned to recognized ESG reporting frameworks",
+      "Verified respondents your auditors can trust",
+      "Experience across manufacturing, retail, and energy sectors",
+      "Data structured for direct use in disclosure documents",
+    ],
+  },
+  {
+    slug: "on-site-digital-fieldwork",
+    icon: "Compass",
+    image: "serviceFieldwork",
+    tag: "CORE METHOD",
+    title: "On-Site & Digital Fieldwork",
+    shortDescription:
+      "The core method behind every KEYVIQ study — human-supervised fieldwork, verified in real time, wherever your market is.",
+    cardBullets: [
+      "In-Person Intercepts",
+      "Digital Ethnography",
+      "Mystery Shopping",
+      "Real-Time Fraud Scrubbing",
+    ],
+    heroTagline:
+      "Every KEYVIQ study runs on the same fieldwork backbone: human-supervised collection, verified device-by-device, in over 50 countries.",
+    whyItMattersTitle: "Why Fieldwork Quality Matters",
+    whyItMattersBody: [
+      "Every research method — surveys, interviews, panels — is only as good as the fieldwork underneath it. Weak fieldwork means fabricated responses, duplicate submissions, and quotas quietly backfilled with junk data.",
+      "KEYVIQ runs on-site and digital fieldwork with local human supervisors in market, layered with GPS-lock and device fingerprinting on every single submission.",
+    ],
+    whatYoullGet: [
+      { icon: "Compass", title: "In-Person Intercepts", body: "Local, trained fieldworkers running intercepts and shop-alongs in market." },
+      { icon: "Cpu", title: "Digital Ethnography", body: "Remote, verified observation of real usage and purchase behavior." },
+      { icon: "ShieldCheck", title: "Real-Time Fraud Scrubbing", body: "Every submission checked against device, IP, and location signals live." },
+    ],
+    detailBlocks: [
+      {
+        title: "In-Person Intercepts",
+        body: "Real conversations, in the moment of decision.",
+        bullets: [
+          "Trained local fieldworkers, not outsourced click-farms",
+          "Shop-along and point-of-purchase intercepts",
+          "Supervisor sign-off on every fielding day",
+        ],
+      },
+      {
+        title: "Digital Ethnography",
+        body: "See how people actually use your product, not how they say they do.",
+        bullets: [
+          "Remote diary studies and screen-recorded sessions",
+          "Verified participant identity via device fingerprinting",
+          "Thematic analysis delivered alongside raw footage",
+        ],
+      },
+      {
+        title: "Mystery Shopping",
+        body: "An honest read on the frontline experience.",
+        bullets: [
+          "Trained shoppers briefed to your exact evaluation criteria",
+          "GPS-verified visit timestamps and locations",
+          "Scorecards benchmarked across locations or competitors",
+        ],
+      },
+    ],
+    howItWorks: [
+      { title: "Define Fieldwork Scope", body: "Markets, methodology, and sample size for your study." },
+      { title: "Local Team Assignment", body: "We staff verified, trained fieldworkers in each market." },
+      { title: "Live-Monitored Collection", body: "Fraud scrubbing and supervisor review run throughout fielding." },
+      { title: "Verified Data Handoff", body: "Clean, audit-ready data delivered with a full verification log." },
+    ],
+    whyChooseUs: [
+      "The verified fieldwork backbone underneath every KEYVIQ service",
+      "Local, trained fieldworkers in 50+ countries",
+      "Real-time fraud scrubbing, not after-the-fact cleanup",
+      "Full verification log delivered with every dataset",
     ],
   },
 ];

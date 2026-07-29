@@ -6,11 +6,7 @@ export function ServicesGrid() {
   return (
     <section className="bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeading
-          eyebrow="What You'll Get"
-          title="Research Services, Sharpened by AI"
-          subtitle="Six core services, each pairing established research methodology with AI-driven analysis."
-        />
+        <SectionHeading eyebrow="What We Offer" title="Our Researches" />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
             <ServiceCard key={service.slug} service={service} index={i} />

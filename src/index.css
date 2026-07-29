@@ -1,26 +1,15 @@
 @import "tailwindcss";
 
-@import "@fontsource/space-grotesk/500.css";
-@import "@fontsource/space-grotesk/600.css";
-@import "@fontsource/space-grotesk/700.css";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/ibm-plex-mono/500.css";
-@import "@fontsource/ibm-plex-mono/600.css";
-
 @theme {
-  --color-keyviq-indigo: #3d5afe;
-  --color-keyviq-indigo-dark: #2a3fd6;
-  --color-keyviq-violet: #8b5cf6;
-  --color-keyviq-navy: #0a0f2c;
-  --color-keyviq-navy-light: #131a3d;
-  --color-keyviq-mist: #f2f5ff;
-  --color-keyviq-slate: #4b5468;
+  --color-keyviq-blue: #1d4ed8;
+  --color-keyviq-blue-light: #2563eb;
+  --color-keyviq-cyan: #22d3ee;
+  --color-keyviq-navy: #0f172a;
+  --color-keyviq-navy-light: #1e293b;
+  --color-keyviq-mist: #f9fafb;
+  --color-keyviq-slate: #4b5563;
 
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-data: "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 @layer base {
@@ -43,15 +32,11 @@
   }
 
   body {
-    @apply bg-white text-keyviq-slate font-body antialiased;
-  }
-
-  h1, h2, h3, h4 {
-    @apply font-display text-keyviq-navy;
+    @apply bg-white text-gray-900 font-sans antialiased;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-keyviq-indigo);
+    outline: 2px solid var(--color-keyviq-blue);
     outline-offset: 2px;
   }
 }

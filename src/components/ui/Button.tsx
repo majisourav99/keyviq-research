@@ -16,12 +16,11 @@ type ButtonProps = {
 };
 
 const variantClasses: Record<Variant, string> = {
-  primary:
-    "bg-keyviq-indigo text-white hover:bg-keyviq-indigo-dark shadow-lg shadow-keyviq-indigo/25",
+  primary: "bg-keyviq-blue text-white hover:bg-blue-800 shadow-lg shadow-keyviq-blue/25",
   outline:
-    "bg-white text-keyviq-indigo border border-keyviq-indigo/30 hover:bg-keyviq-mist",
+    "bg-white text-keyviq-blue border border-keyviq-blue/30 hover:bg-keyviq-mist",
   ghost: "bg-white/10 text-white border border-white/30 hover:bg-white/20",
-  light: "bg-white text-keyviq-indigo hover:bg-white/90 shadow-lg shadow-black/10",
+  light: "bg-white text-keyviq-blue hover:bg-white/90 shadow-lg shadow-black/10",
 };
 
 export function Button({
@@ -34,7 +33,7 @@ export function Button({
   type = "button",
   onClick,
 }: ButtonProps) {
-  const classes = `inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm transition-all duration-200 hover:-translate-y-0.5 ${variantClasses[variant]} ${className}`;
+  const classes = `inline-flex items-center gap-2 rounded-md px-6 py-3 font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 ${variantClasses[variant]} ${className}`;
 
   const content = (
     <>

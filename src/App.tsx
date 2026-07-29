@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { TopBar } from "./components/layout/TopBar";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import { Home } from "./pages/Home";
@@ -22,6 +23,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div className="flex min-h-screen flex-col">
+        <TopBar />
         <Navbar />
         <main className="flex-1">
           <Routes>

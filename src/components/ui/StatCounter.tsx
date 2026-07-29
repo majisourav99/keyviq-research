@@ -15,11 +15,11 @@ export function StatCounter({ value, label, light = true }: StatCounterProps) {
       transition={{ duration: 0.4 }}
     >
       <div
-        className={`font-data text-3xl sm:text-4xl font-semibold ${light ? "text-white" : "text-keyviq-navy"}`}
+        className={`text-3xl sm:text-4xl font-bold ${light ? "text-white" : "text-keyviq-blue"}`}
       >
         {value}
       </div>
-      <div className={`mt-1 text-sm ${light ? "text-white/70" : "text-keyviq-slate"}`}>
+      <div className={`mt-1 text-sm ${light ? "text-white/70" : "text-gray-500"}`}>
         {label}
       </div>
     </motion.div>

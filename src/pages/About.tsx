@@ -1,76 +1,60 @@
-import { motion } from "framer-motion";
-import { CheckList } from "../components/ui/CheckList";
-import { InsightGraphic } from "../components/ui/InsightGraphic";
 import { StatCounter } from "../components/ui/StatCounter";
+import { Button } from "../components/ui/Button";
 import { CoreValues } from "../components/sections/CoreValues";
 import { CTASection } from "../components/ui/CTASection";
+import { PageHeader } from "../components/layout/PageHeader";
 import { stats } from "../data/content";
-
-const milestones = [
-  "Founded to close the gap between market research and real-time decision making",
-  "Built a proprietary AI analytics engine trained across 60+ countries of panel data",
-  "Grew into a full-service research partner spanning 8 industries",
-];
+import { images } from "../data/images";
 
 export function About() {
   return (
     <>
-      <section className="bg-gradient-to-br from-keyviq-navy via-keyviq-indigo-dark to-keyviq-indigo py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/80 font-data"
-          >
-            About Keyviq Research
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-            className="mt-4 text-3xl sm:text-4xl font-semibold text-white tracking-tight"
-          >
-            Research You Can Trust. Analysis That Keeps Up.
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 text-white/70"
-          >
-            We started Keyviq Research on a simple premise: market research
-            shouldn't take longer than the market itself to move. AI
-            analytics closes that gap.
-          </motion.p>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="About Us"
+        title="About KEYVIQ"
+        breadcrumb="About"
+        image={images.pageHeaderAbout}
+      />
 
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-14 items-center">
-          <InsightGraphic label="A Decade of Signal" />
+          <img
+            src={images.serviceAiLlm}
+            alt="KEYVIQ research operations"
+            className="rounded-2xl w-full aspect-4/3 object-cover"
+          />
           <div>
-            <h2 className="text-3xl font-semibold text-keyviq-navy tracking-tight">Our Story</h2>
-            <p className="mt-4 text-keyviq-slate">
-              Keyviq Research was founded by a team of market researchers and
-              data scientists who kept hitting the same wall: brilliant
-              qualitative work, buried under a six-week analysis backlog. We
-              built the AI analytics layer we wished we'd had — and started
-              offering it to clients.
+            <span className="text-xs font-bold tracking-widest uppercase text-keyviq-blue">
+              Our Story
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+              Who We Are
+            </h2>
+            <p className="mt-4 text-gray-500">
+              KEYVIQ is a premium Hybrid (Human + AI) Market Research Agency registered
+              in the US, operating globally. We deliver both digital and on-site market
+              research for Tech, B2B, B2C, and Healthcare companies.
             </p>
-            <p className="mt-4 text-keyviq-slate">
-              Today that same engine powers every engagement we run, from a
-              single focus group to a multi-market entry study.
+            <p className="mt-4 text-gray-500">
+              We occupy the high-margin sweet spot:{" "}
+              <strong className="text-gray-900">
+                verified human data, supervised by human experts, accelerated by AI tools.
+              </strong>{" "}
+              Traditional agencies are slow and error-prone. Pure AI startups lack
+              real-world validation. KEYVIQ combines the best of both — with an
+              anti-fraud security stack that competitors simply cannot replicate.
             </p>
-            <div className="mt-6">
-              <CheckList items={milestones} />
+            <div className="mt-8">
+              <Button to="/contact" icon={false}>
+                Get In Touch
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       <section className="bg-keyviq-navy py-16">
-        <div className="mx-auto max-w-7xl px-6 grid grid-cols-3 gap-6 max-w-md sm:max-w-none">
+        <div className="mx-auto max-w-7xl px-6 grid grid-cols-3 gap-6">
           {stats.map((stat) => (
             <StatCounter key={stat.label} {...stat} />
           ))}
@@ -81,7 +65,7 @@ export function About() {
 
       <CTASection
         title="Want to Work With Us?"
-        subtitle="Tell us about your business and we'll show you what AI-powered research looks like for your category."
+        subtitle="Tell us about your business and we'll show you what verified, AI-accelerated research looks like for your category."
         buttonLabel="Get in Touch"
         buttonTo="/contact"
       />

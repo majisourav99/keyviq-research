@@ -26,22 +26,20 @@ export function SectionHeading({
     >
       {eyebrow && (
         <span
-          className={`mb-3 inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase font-data ${
-            light
-              ? "bg-white/10 text-white/80"
-              : "bg-keyviq-indigo/10 text-keyviq-indigo"
+          className={`mb-3 inline-block text-xs font-bold tracking-widest uppercase ${
+            light ? "text-white/80" : "text-keyviq-blue"
           }`}
         >
           {eyebrow}
         </span>
       )}
       <h2
-        className={`text-3xl sm:text-4xl font-semibold tracking-tight ${light ? "text-white" : "text-keyviq-navy"}`}
+        className={`text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight ${light ? "text-white" : "text-gray-900"}`}
       >
         {title}
       </h2>
       {subtitle && (
-        <p className={`mt-3 text-base ${light ? "text-white/70" : "text-keyviq-slate"}`}>
+        <p className={`mt-3 text-base ${light ? "text-white/70" : "text-gray-500"}`}>
           {subtitle}
         </p>
       )}

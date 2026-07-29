@@ -1,19 +1,16 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "../ui/SectionHeading";
 import { IconBadge } from "../ui/IconBadge";
-import { Button } from "../ui/Button";
 import { whyKeyviq } from "../../data/content";
-
-const icons = ["Award", "Sparkles", "ShieldCheck", "Globe", "ShieldCheck", "Handshake"];
 
 export function WhyKeyviq() {
   return (
     <section className="bg-keyviq-mist py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Why Keyviq"
-          title="The Complete Package for Data-Driven Growth"
-          subtitle="Everything you need for market and consumer insight, in one AI-augmented partner."
+          eyebrow="Why Choose Us"
+          title="Few Reasons Why People Choose Us"
+          subtitle="We bring together global reach, local expertise, and relentless commitment to delivering insights that actually move the needle."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {whyKeyviq.map((item, i) => (
@@ -23,18 +20,16 @@ export function WhyKeyviq() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
-              className="rounded-2xl bg-white p-6 border border-keyviq-navy/5"
+              className="rounded-2xl bg-white p-6 border border-gray-100"
             >
-              <IconBadge icon={icons[i]} size="sm" />
-              <h3 className="mt-4 font-semibold text-keyviq-navy">{item.title}</h3>
-              <p className="mt-2 text-sm text-keyviq-slate">{item.body}</p>
+              <IconBadge icon={item.icon} size="sm" tone="light" />
+              <h3 className="mt-4 font-bold text-gray-900">{item.title}</h3>
+              <p className="mt-2 text-sm text-gray-500">{item.body}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-keyviq-blue">
+                Read More →
+              </span>
             </motion.div>
           ))}
-        </div>
-        <div className="mt-12 flex justify-center">
-          <Button to="/about" variant="outline">
-            Learn More
-          </Button>
         </div>
       </div>
     </section>

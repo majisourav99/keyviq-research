@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { nav } from "../../data/content";
 import { Button } from "../ui/Button";
 
@@ -8,15 +8,11 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-keyviq-navy/5 bg-white/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="inline-flex size-8 items-center justify-center rounded-lg bg-gradient-to-br from-keyviq-indigo to-keyviq-violet text-white">
-            <Sparkles className="size-4.5" />
-          </span>
-          <span className="font-display text-lg font-semibold text-keyviq-navy">
-            Keyviq<span className="text-keyviq-indigo"> Research</span>
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <span className="text-2xl font-black tracking-tight text-keyviq-blue">KEY</span>
+          <span className="text-2xl font-black tracking-tight text-gray-900">VIQ</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -25,8 +21,10 @@ export function Navbar() {
               key={item.href}
               to={item.href}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${
-                  isActive ? "text-keyviq-indigo" : "text-keyviq-slate hover:text-keyviq-navy"
+                `text-sm font-medium uppercase tracking-wide transition-colors ${
+                  isActive
+                    ? "text-keyviq-blue border-b-2 border-keyviq-blue pb-1"
+                    : "text-gray-600 hover:text-gray-900"
                 }`
               }
             >
@@ -36,13 +34,13 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <Button to="/contact" icon={false} className="!py-2.5 !px-5">
-            Get Started
+          <Button to="/contact" icon={false} className="!py-2.5 !px-5 uppercase text-xs tracking-wide">
+            Get a Quote
           </Button>
         </div>
 
         <button
-          className="md:hidden text-keyviq-navy"
+          className="md:hidden text-gray-900"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
@@ -51,21 +49,21 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-keyviq-navy/5 bg-white px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 flex flex-col gap-4">
           {nav.map((item) => (
             <NavLink
               key={item.href}
               to={item.href}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `text-sm font-medium ${isActive ? "text-keyviq-indigo" : "text-keyviq-slate"}`
+                `text-sm font-medium ${isActive ? "text-keyviq-blue" : "text-gray-600"}`
               }
             >
               {item.label}
             </NavLink>
           ))}
           <Button to="/contact" icon={false} className="!py-2.5 !px-5 w-fit" onClick={() => setOpen(false)}>
-            Get Started
+            Get a Quote
           </Button>
         </div>
       )}

@@ -3,22 +3,22 @@ import { iconMap } from "../../lib/icons";
 type IconBadgeProps = {
   icon: string;
   size?: "sm" | "md" | "lg";
-  tone?: "indigo" | "white" | "navy";
+  tone?: "blue" | "light" | "navy";
 };
 
 const sizeClasses = {
   sm: "size-9 [&>svg]:size-4 rounded-lg",
-  md: "size-11 [&>svg]:size-5 rounded-xl",
-  lg: "size-14 [&>svg]:size-6 rounded-2xl",
+  md: "size-11 [&>svg]:size-5 rounded-lg",
+  lg: "size-14 [&>svg]:size-6 rounded-xl",
 };
 
 const toneClasses = {
-  indigo: "bg-gradient-to-br from-keyviq-indigo to-keyviq-violet text-white",
-  white: "bg-white text-keyviq-indigo shadow-sm",
-  navy: "bg-keyviq-navy-light text-keyviq-violet",
+  blue: "bg-keyviq-blue text-white",
+  light: "bg-blue-50 text-keyviq-blue",
+  navy: "bg-keyviq-navy-light text-keyviq-cyan",
 };
 
-export function IconBadge({ icon, size = "md", tone = "indigo" }: IconBadgeProps) {
+export function IconBadge({ icon, size = "md", tone = "blue" }: IconBadgeProps) {
   const Icon = iconMap[icon] ?? iconMap.Sparkles;
   return (
     <div

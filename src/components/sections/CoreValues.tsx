@@ -3,14 +3,12 @@ import { SectionHeading } from "../ui/SectionHeading";
 import { IconBadge } from "../ui/IconBadge";
 import { coreValues } from "../../data/content";
 
-const icons = ["ShieldCheck", "Trophy", "Sparkles", "Handshake"];
-
 export function CoreValues() {
   return (
     <section className="bg-keyviq-mist py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="What Guides Us"
+          eyebrow="What We Stand For"
           title="Our Core Values"
           subtitle="The principles that guide our commitment to excellence and client success."
         />
@@ -22,13 +20,13 @@ export function CoreValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-2xl bg-white p-6 text-center border border-keyviq-navy/5"
+              className="rounded-2xl bg-white p-6 text-center border border-gray-100"
             >
               <div className="flex justify-center">
-                <IconBadge icon={icons[i]} size="md" />
+                <IconBadge icon={value.icon} size="md" />
               </div>
-              <h3 className="mt-4 font-semibold text-keyviq-navy">{value.title}</h3>
-              <p className="mt-2 text-sm text-keyviq-slate">{value.body}</p>
+              <h3 className="mt-4 font-bold text-gray-900">{value.title}</h3>
+              <p className="mt-2 text-sm text-gray-500">{value.body}</p>
             </motion.div>
           ))}
         </div>

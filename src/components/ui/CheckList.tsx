@@ -14,9 +14,9 @@ export function CheckList({ items, columns = 1, light = false }: CheckListProps)
       {items.map((item) => (
         <li key={item} className="flex items-start gap-2.5">
           <CircleCheck
-            className={`size-4.5 mt-0.5 shrink-0 ${light ? "text-keyviq-violet" : "text-keyviq-indigo"}`}
+            className={`size-4.5 mt-0.5 shrink-0 ${light ? "text-white" : "text-keyviq-blue"}`}
           />
-          <span className={`text-sm ${light ? "text-white/80" : "text-keyviq-slate"}`}>
+          <span className={`text-sm ${light ? "text-white/90" : "text-gray-600"}`}>
             {item}
           </span>
         </li>

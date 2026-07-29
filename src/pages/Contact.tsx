@@ -1,8 +1,9 @@
 import { useState, type FormEvent } from "react";
-import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, CircleCheck } from "lucide-react";
 import { contactInfo } from "../data/content";
 import { Button } from "../components/ui/Button";
+import { PageHeader } from "../components/layout/PageHeader";
+import { images } from "../data/images";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -14,37 +15,22 @@ export function Contact() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-keyviq-navy via-keyviq-indigo-dark to-keyviq-indigo py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl sm:text-4xl font-semibold text-white tracking-tight"
-          >
-            Let's Talk Research
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-            className="mt-4 text-white/70"
-          >
-            Tell us about your business and we'll get back to you within one
-            business day.
-          </motion.p>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Get In Touch"
+        title="Let's Talk Research"
+        breadcrumb="Contact"
+        image={images.pageHeaderContact}
+      />
 
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-3">
             {submitted ? (
-              <div className="rounded-2xl border border-keyviq-indigo/20 bg-keyviq-mist p-8 flex items-start gap-3">
-                <CircleCheck className="size-6 text-keyviq-indigo shrink-0" />
+              <div className="rounded-2xl border border-keyviq-blue/20 bg-keyviq-mist p-8 flex items-start gap-3">
+                <CircleCheck className="size-6 text-keyviq-blue shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-keyviq-navy">Message sent</h3>
-                  <p className="mt-1 text-sm text-keyviq-slate">
+                  <h3 className="font-bold text-gray-900">Message sent</h3>
+                  <p className="mt-1 text-sm text-gray-500">
                     Thanks for reaching out — a member of our team will
                     respond within one business day.
                   </p>
@@ -54,7 +40,7 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="name" className="text-sm font-medium text-keyviq-navy">
+                    <label htmlFor="name" className="text-sm font-medium text-gray-700">
                       Full name
                     </label>
                     <input
@@ -62,11 +48,11 @@ export function Contact() {
                       name="name"
                       required
                       type="text"
-                      className="mt-1.5 w-full rounded-xl border border-keyviq-navy/10 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-indigo"
+                      className="mt-1.5 w-full rounded-md border border-gray-200 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-blue"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="text-sm font-medium text-keyviq-navy">
+                    <label htmlFor="email" className="text-sm font-medium text-gray-700">
                       Work email
                     </label>
                     <input
@@ -74,23 +60,23 @@ export function Contact() {
                       name="email"
                       required
                       type="email"
-                      className="mt-1.5 w-full rounded-xl border border-keyviq-navy/10 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-indigo"
+                      className="mt-1.5 w-full rounded-md border border-gray-200 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-blue"
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="company" className="text-sm font-medium text-keyviq-navy">
+                  <label htmlFor="company" className="text-sm font-medium text-gray-700">
                     Company
                   </label>
                   <input
                     id="company"
                     name="company"
                     type="text"
-                    className="mt-1.5 w-full rounded-xl border border-keyviq-navy/10 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-indigo"
+                    className="mt-1.5 w-full rounded-md border border-gray-200 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-blue"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="text-sm font-medium text-keyviq-navy">
+                  <label htmlFor="message" className="text-sm font-medium text-gray-700">
                     What are you looking to learn?
                   </label>
                   <textarea
@@ -98,7 +84,7 @@ export function Contact() {
                     name="message"
                     required
                     rows={5}
-                    className="mt-1.5 w-full rounded-xl border border-keyviq-navy/10 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-indigo"
+                    className="mt-1.5 w-full rounded-md border border-gray-200 px-4 py-2.5 text-sm outline-none focus-visible:border-keyviq-blue"
                   />
                 </div>
                 <Button type="submit" icon={false}>
@@ -110,26 +96,26 @@ export function Contact() {
 
           <div className="lg:col-span-2 rounded-2xl bg-keyviq-mist p-8 h-fit space-y-6">
             <div className="flex items-start gap-3">
-              <Mail className="size-5 text-keyviq-indigo shrink-0" />
+              <Mail className="size-5 text-keyviq-blue shrink-0" />
               <div>
-                <h4 className="text-sm font-semibold text-keyviq-navy">Email</h4>
-                <a href={`mailto:${contactInfo.email}`} className="text-sm text-keyviq-slate hover:text-keyviq-indigo break-all">
+                <h4 className="text-sm font-bold text-gray-900">Email</h4>
+                <a href={`mailto:${contactInfo.email}`} className="text-sm text-gray-500 hover:text-keyviq-blue break-all">
                   {contactInfo.email}
                 </a>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <Phone className="size-5 text-keyviq-indigo shrink-0" />
+              <Phone className="size-5 text-keyviq-blue shrink-0" />
               <div>
-                <h4 className="text-sm font-semibold text-keyviq-navy">Phone</h4>
-                <span className="text-sm text-keyviq-slate">{contactInfo.phone}</span>
+                <h4 className="text-sm font-bold text-gray-900">Phone</h4>
+                <span className="text-sm text-gray-500">{contactInfo.phone}</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <MapPin className="size-5 text-keyviq-indigo shrink-0" />
+              <MapPin className="size-5 text-keyviq-blue shrink-0" />
               <div>
-                <h4 className="text-sm font-semibold text-keyviq-navy">Office</h4>
-                <span className="text-sm text-keyviq-slate">{contactInfo.office}</span>
+                <h4 className="text-sm font-bold text-gray-900">Office</h4>
+                <span className="text-sm text-gray-500">{contactInfo.office}</span>
               </div>
             </div>
           </div>
