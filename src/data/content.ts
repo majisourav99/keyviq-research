@@ -42,31 +42,43 @@ export const whyKeyviq = [
     icon: "Globe",
     title: "Global Reach",
     body: "Operations across 50+ countries with access to vast consumer panels and deep local market expertise worldwide.",
+    details:
+      "Our panels span North America, Europe, Latin America, and Asia-Pacific, with local-language survey design and in-market fieldwork teams rather than a single translated template. That means recruitment criteria, incentive structures, and data privacy handling are adapted to each market's norms and regulations, so a study run in Tokyo and one run in São Paulo are both built for that market — not bent to fit a US-default process.",
   },
   {
     icon: "Lightbulb",
     title: "Innovative Approach",
     body: "The KEYVIQ Centaur Engine: Human Experts handle strategy & analysis. AI handles error-scrubbing, transcription & fraud detection — in perfect sync.",
+    details:
+      "Human researchers design the study, supervise fieldwork, and write the final recommendations — the parts of the job that require judgment. AI handles the parts that don't: transcribing interviews, flagging inconsistent or bot-like responses in real time, and cross-checking device/location signals against every submission. The result is a workflow where AI removes grunt work and error risk, but a person is always accountable for what goes in the final report.",
   },
   {
     icon: "BarChart3",
     title: "Customized Solutions",
     body: "No templates. Every study is designed from scratch — custom strategy, on-site execution, anti-fraud scrubbing, and a final expert analysis deck.",
+    details:
+      "We start every engagement with a scoping call to understand your specific decision — not a menu of pre-built survey templates. From there we design the sample, screening criteria, and questionnaire (or fieldwork protocol) around that decision, run it with the same anti-fraud verification on every submission, and hand back an analysis deck written for your context, with recommendations tied directly to the business question you started with.",
   },
   {
     icon: "ShieldCheck",
     title: "Ethical Standards",
     body: "Ironclad anti-fraud stack: Unique IP verification, hardware device fingerprinting, and GPS/geolocation lock on every survey submission.",
+    details:
+      "Every respondent is checked against three independent signals before their data counts: a unique-IP check to catch duplicate submissions, hardware device fingerprinting to catch the same person or bot farm responding repeatedly under different identities, and GPS/geolocation lock to confirm respondents are physically where they claim to be. Flagged submissions are reviewed by a human analyst before being included or excluded — nothing gets silently dropped or silently kept.",
   },
   {
     icon: "Award",
     title: "Proven Track Record",
     body: "274+ successful projects across 8 industries with measurable outcomes and long-term client relationships.",
+    details:
+      "274+ completed studies span healthcare and pharma, B2B SaaS, automotive, food and agriculture, sustainability, and more — with the majority of clients returning for a second or third engagement rather than a one-off project. We track outcomes past delivery where we can: expansion decisions that shipped, features that got built, campaigns that launched, because a research report is only as good as the decision it changed.",
   },
   {
     icon: "ClipboardCheck",
     title: "On-Time Delivery",
     body: "Detailed project timelines agreed upfront. We respect your deadlines because your business decisions depend on it.",
+    details:
+      "Before fieldwork starts, you get a written timeline with dates for recruitment completion, fieldwork close, and final deliverable — not a rough estimate. If something in the field runs behind (a market is slower to recruit, for example), we flag it as soon as we see it rather than waiting until the deadline to explain a miss. Most studies ship on the date agreed at kickoff.",
   },
 ];
 
