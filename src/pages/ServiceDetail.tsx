@@ -7,6 +7,7 @@ import { CheckList } from "../components/ui/CheckList";
 import { CTASection } from "../components/ui/CTASection";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { images } from "../data/images";
+import { brand } from "../data/content";
 
 export function ServiceDetail() {
   const { slug } = useParams();
@@ -151,7 +152,7 @@ export function ServiceDetail() {
 
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-6">
-          <SectionHeading eyebrow="Why Choose Us" title={`Why Businesses Choose Keyviq Research for ${service.title}`} />
+          <SectionHeading eyebrow="Why Choose Us" title={`Why Businesses Choose ${brand.name} for ${service.title}`} />
           <div className="mt-10">
             <CheckList items={service.whyChooseUs} columns={2} />
           </div>

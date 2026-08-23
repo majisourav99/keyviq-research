@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Share2, Rss, Link2, Send } from "lucide-react";
-import { footerColumns, contactInfo } from "../../data/content";
+import { footerColumns, contactInfo, brand } from "../../data/content";
 import { services } from "../../data/services";
 
 export function Footer() {
@@ -8,16 +8,23 @@ export function Footer() {
     <footer className="bg-keyviq-navy text-white/70">
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link to="/" className="flex items-baseline gap-1.5">
-            <span className="flex items-center">
-              <span className="text-2xl font-black tracking-tight text-white">KEY</span>
-              <span className="text-2xl font-black tracking-tight text-keyviq-cyan">VIQ</span>
+          <Link to="/" className="inline-flex items-center gap-2">
+            <span className="inline-flex items-center justify-center rounded-md bg-white p-1.5 w-fit">
+              <img src="/k-mark.png" alt="" className="h-6 w-auto" />
             </span>
-            <span className="text-sm font-medium text-white/60">Research</span>
+            <span className="inline-flex flex-col leading-none">
+              <span className="inline-block rounded-md bg-white px-2.5 py-1.5 w-fit">
+                <img src="/keyviq-wordmark.png" alt={brand.name} className="h-5 w-auto object-contain" />
+              </span>
+              <span className="text-[11px] font-medium tracking-wide text-white/50 mt-1.5">
+                {brand.descriptor}
+              </span>
+            </span>
           </Link>
-          <p className="mt-4 text-sm max-w-xs">
-            A premium Hybrid (Human + AI) Market Research Agency delivering high-integrity data
-            across 50+ countries with zero operational errors.
+          <p className="mt-4 text-sm font-medium text-keyviq-cyan">{brand.tagline}</p>
+          <p className="mt-2 text-sm max-w-xs">
+            Verified, data-driven intelligence — combining human expertise, AI, and rigorous
+            research across 50+ countries.
           </p>
           <div className="mt-5 flex gap-3">
             {[Share2, Rss, Link2, Send].map((Icon, i) => (
@@ -82,7 +89,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-white/50 flex flex-col sm:flex-row justify-between gap-2">
-          <span>© {new Date().getFullYear()} Keyviq Research. Premium Market Research — Global Operations. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} {brand.name}. {brand.descriptor} — Global Operations. All rights reserved.</span>
           <div className="flex gap-4">
             <Link to="/contact" className="hover:text-white">
               Privacy Policy

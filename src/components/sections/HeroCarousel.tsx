@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../ui/Button";
-import { heroSlides } from "../../data/content";
+import { heroSlides, heroEyebrow, brand } from "../../data/content";
 import { images } from "../../data/images";
 
 export function HeroCarousel() {
@@ -37,31 +37,41 @@ export function HeroCarousel() {
       <div className="absolute inset-0 bg-gradient-to-r from-keyviq-navy/90 via-keyviq-navy/70 to-keyviq-navy/40" />
 
       <div className="relative h-full mx-auto max-w-7xl px-6 flex items-center">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-xl"
-          >
-            <span className="text-xs font-bold tracking-widest uppercase text-keyviq-cyan">
-              {slide.eyebrow}
-            </span>
-            <h1 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight text-white">
-              {slide.title}
-            </h1>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button to="/services" variant="light" icon={false}>
-                Read More
-              </Button>
-              <Button to="/contact" variant="ghost" icon={false}>
-                Contact Us
-              </Button>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-xl"
+        >
+          <span className="text-xs font-bold tracking-widest uppercase text-keyviq-cyan">
+            {heroEyebrow}
+          </span>
+          <h1 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight text-white">
+            {brand.tagline}
+          </h1>
+
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.5 }}
+              className="mt-4 text-lg text-white/80"
+            >
+              {slide.subline}
+            </motion.p>
+          </AnimatePresence>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button to="/services" variant="light" icon={false}>
+              Read More
+            </Button>
+            <Button to="/contact" variant="ghost" icon={false}>
+              Contact Us
+            </Button>
+          </div>
+        </motion.div>
       </div>
 
       <button
@@ -82,7 +92,7 @@ export function HeroCarousel() {
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {heroSlides.map((s, i) => (
           <button
-            key={s.title}
+            key={s.subline}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
             className={`h-1.5 rounded-full transition-all ${

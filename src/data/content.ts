@@ -12,20 +12,29 @@ export const stats = [
   { value: "340+", label: "Researches Completed" },
 ];
 
+export const brand = {
+  name: "KEYVIQ",
+  descriptor: "Market Intelligence & Technology Solutions",
+  tagline: "Intelligence Beyond Information",
+  mission:
+    "To deliver verified, data-driven intelligence by combining human expertise, AI, and rigorous research to empower organizations with confident decisions.",
+  vision:
+    "To set the global benchmark for human–AI intelligence that transforms complexity into confident action.",
+};
+
+export const heroEyebrow = "KEYVIQ — MARKET INTELLIGENCE & TECHNOLOGY SOLUTIONS";
+
 export const heroSlides = [
   {
-    eyebrow: "KEYVIQ — HYBRID HUMAN + AI RESEARCH",
-    title: "Verified Human Data. Zero Operational Errors.",
+    subline: "Verified Human Data. Zero Operational Errors.",
     image: "heroDashboard",
   },
   {
-    eyebrow: "KEYVIQ — ANTI-FRAUD SECURITY STACK",
-    title: "GPS-Locked, Device-Fingerprinted, Fraud-Proof Data.",
+    subline: "GPS-Locked, Device-Fingerprinted, Fraud-Proof Data.",
     image: "heroSecurity",
   },
   {
-    eyebrow: "KEYVIQ — GLOBAL PANEL NETWORK",
-    title: "Global Panels. Local Expertise. One Platform.",
+    subline: "Global Panels. Local Expertise. One Platform.",
     image: "heroTeam",
   },
 ];

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { CheckList } from "../ui/CheckList";
 import { StatCounter } from "../ui/StatCounter";
 import { Button } from "../ui/Button";
-import { aboutChecklist, stats } from "../../data/content";
+import { aboutChecklist, stats, brand } from "../../data/content";
 import { images } from "../../data/images";
 
 export function AboutPreview() {
@@ -18,7 +18,7 @@ export function AboutPreview() {
         >
           <img
             src={images.about}
-            alt="Keyviq Research researcher at work"
+            alt={`${brand.name} researcher at work`}
             className="rounded-2xl w-full aspect-4/3 object-cover"
           />
           <div className="absolute bottom-5 right-5 rounded-xl bg-keyviq-blue px-6 py-4 text-white shadow-lg">
@@ -38,11 +38,11 @@ export function AboutPreview() {
             Who We Are
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-            The High-Margin Sweet Spot Between Human Expertise & AI Precision
+            {brand.tagline}
           </h2>
           <p className="mt-4 text-gray-500">
-            Keyviq Research is a premium Hybrid (Human + AI) Market Research Agency registered in the
-            US, operating globally. Instead of replacing humans with AI, we use AI to
+            {brand.name} is a {brand.descriptor.toLowerCase()} company, registered in the
+            US and operating globally. Instead of replacing humans with AI, we use AI to
             eliminate human errors — while our Human Experts handle project strategy,
             on-site supervision, and final client recommendations. The result: verified
             human data, zero operational errors, at enterprise scale.
