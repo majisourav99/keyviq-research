@@ -20,7 +20,7 @@ export function Navbar() {
               alt={brand.name}
               className="h-6 w-auto object-contain"
             />
-            <span className="hidden sm:block text-xs font-medium tracking-wide text-keyviq-blue mt-1">
+            <span className="block text-xs font-medium tracking-wide text-keyviq-blue mt-1">
               {brand.descriptor}
             </span>
           </Link>
