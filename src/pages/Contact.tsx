@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { Mail, Phone, MapPin, CircleCheck, CircleAlert } from "lucide-react";
+import { Mail, MapPin, CircleCheck, CircleAlert } from "lucide-react";
 import { contactInfo } from "../data/content";
 import { Button } from "../components/ui/Button";
 import { PageHeader } from "../components/layout/PageHeader";
@@ -137,13 +137,6 @@ export function Contact() {
                 <a href={`mailto:${contactInfo.email}`} className="text-sm text-gray-500 hover:text-keyviq-blue break-all">
                   {contactInfo.email}
                 </a>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <Phone className="size-5 text-keyviq-blue shrink-0" />
-              <div>
-                <h4 className="text-sm font-bold text-gray-900">Phone</h4>
-                <span className="text-sm text-gray-500">{contactInfo.phone}</span>
               </div>
             </div>
             <div className="flex items-start gap-3">

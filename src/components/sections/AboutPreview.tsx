@@ -22,7 +22,7 @@ export function AboutPreview() {
             className="rounded-2xl w-full aspect-4/3 object-cover"
           />
           <div className="absolute bottom-5 right-5 rounded-xl bg-keyviq-blue px-6 py-4 text-white shadow-lg">
-            <div className="text-2xl font-bold">340+</div>
+            <div className="text-2xl font-bold">10+</div>
             <div className="text-xs uppercase tracking-wide text-white/80">Researches Completed</div>
           </div>
         </motion.div>

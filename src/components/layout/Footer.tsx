@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Share2, Rss, Link2, Send } from "lucide-react";
+import { Mail, MapPin, Share2, Rss, Link2, Send } from "lucide-react";
 import { footerColumns, contactInfo, brand } from "../../data/content";
 import { services } from "../../data/services";
 
@@ -72,10 +72,6 @@ export function Footer() {
             <li className="flex items-start gap-2">
               <MapPin className="size-4 mt-0.5 shrink-0" />
               <span>{contactInfo.office}</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Phone className="size-4 mt-0.5 shrink-0" />
-              <span>{contactInfo.phone}</span>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="size-4 mt-0.5 shrink-0" />

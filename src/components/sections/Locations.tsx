@@ -18,7 +18,7 @@ export function Locations() {
             Locations
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
-            Support across 50+ countries
+            Support across 10+ countries
             <br />
             <span className="text-keyviq-blue">around the world</span>
           </h2>
@@ -56,8 +56,8 @@ export function Locations() {
               <Globe className="size-4" />
             </span>
             <div>
-              <div className="text-white font-semibold text-sm">50+ Countries Worldwide</div>
-              <div className="text-white/60 text-xs">Delivering local expertise across 50+ countries</div>
+              <div className="text-white font-semibold text-sm">10+ Countries Worldwide</div>
+              <div className="text-white/60 text-xs">Delivering local expertise across 10+ countries</div>
             </div>
           </div>
         </div>
