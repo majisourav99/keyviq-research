@@ -24,7 +24,7 @@ export function Footer() {
           <p className="mt-4 text-sm font-medium text-keyviq-cyan">{brand.tagline}</p>
           <p className="mt-2 text-sm max-w-xs">
             Verified, data-driven intelligence — combining human expertise, AI, and rigorous
-            research across 50+ countries.
+            research across 10+ countries.
           </p>
           <div className="mt-5 flex gap-3">
             {[Share2, Rss, Link2, Send].map((Icon, i) => (
