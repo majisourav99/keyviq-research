@@ -3,11 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeading } from "../ui/SectionHeading";
 import { testimonials } from "../../data/content";
-import { images } from "../../data/images";
 
 export function Testimonials() {
   const [index, setIndex] = useState(0);
-  const item = testimonials[index];
+  const quote = testimonials[index];
 
   function go(delta: number) {
     setIndex((i) => (i + delta + testimonials.length) % testimonials.length);
@@ -29,18 +28,7 @@ export function Testimonials() {
               className="rounded-2xl bg-white p-8 sm:p-10 shadow-sm border border-gray-100 relative"
             >
               <Quote className="absolute top-6 right-6 size-8 text-blue-100" />
-              <p className="italic text-gray-700 leading-relaxed">"{item.quote}"</p>
-              <div className="mt-6 flex items-center gap-3">
-                <img
-                  src={images[item.avatar as keyof typeof images]}
-                  alt={item.name}
-                  className="size-11 rounded-full object-cover"
-                />
-                <div>
-                  <div className="font-semibold text-gray-900 text-sm">{item.name}</div>
-                  <div className="text-sm text-keyviq-blue">{item.role}</div>
-                </div>
-              </div>
+              <p className="italic text-gray-700 leading-relaxed">"{quote}"</p>
             </motion.div>
           </AnimatePresence>
 
@@ -48,7 +36,7 @@ export function Testimonials() {
             <div className="flex gap-2">
               {testimonials.map((t, i) => (
                 <button
-                  key={t.name}
+                  key={t}
                   aria-label={`Go to testimonial ${i + 1}`}
                   onClick={() => setIndex(i)}
                   className={`h-1.5 rounded-full transition-all ${

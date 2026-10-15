@@ -10,7 +10,7 @@ export function Footer() {
         <div>
           <Link to="/" className="inline-flex items-center gap-2">
             <span className="inline-flex items-center justify-center rounded-md bg-white p-1.5 w-fit">
-              <img src="/k-mark.png" alt="" className="h-6 w-auto" />
+              <img src="/logo-hex.png" alt="" className="h-8 w-auto" />
             </span>
             <span className="inline-flex flex-col leading-none">
               <span className="inline-block rounded-md bg-white px-2.5 py-1.5 w-fit">
@@ -22,10 +22,6 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-4 text-sm font-medium text-keyviq-cyan">{brand.tagline}</p>
-          <p className="mt-2 text-sm max-w-xs">
-            Verified, data-driven intelligence — combining human expertise, AI, and rigorous
-            research across 10+ countries.
-          </p>
           <div className="mt-5 flex gap-3">
             {[Share2, Rss, Link2, Send].map((Icon, i) => (
               <a

@@ -46,7 +46,7 @@ export function Button({
 
   if (to) {
     return (
-      <Link to={to} className={classes}>
+      <Link to={to} onClick={onClick} className={classes}>
         {content}
       </Link>
     );
@@ -54,7 +54,7 @@ export function Button({
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} onClick={onClick} className={classes}>
         {content}
       </a>
     );
